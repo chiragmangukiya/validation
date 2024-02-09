@@ -38,7 +38,7 @@ function App() {
       <div className="container">
           <form onSubmit={handleSubmit} className="row g-3">
                <div className="col-md-12">
-                    <label htmlFor="inputEmail1" className="form-label">Your Name</label>
+                    <label htmlFor="inputEmail1" className="form-label">Your Full Name</label>
                     <input type="text" 
                            className="form-control" 
                            id="inputEmail1" 
@@ -85,8 +85,9 @@ function App() {
 
                     {errors.cpassword && touched.cpassword ? (<span className="error text-danger">{errors.cpassword}</span>) : null}
                </div>       
-               <div className="col-md-6">
+               <div className="col-md-4">
                     <label className="form-label">Gender</label>
+                    <div>
                     <input type="radio" 
                            className="form-check-input"  
                            name="gender" 
@@ -99,11 +100,13 @@ function App() {
                            value='female' 
                            onChange={handleChange} 
                            onBlur={handleBlur} /> Female
+                           </div>
 
                     {errors.gender && touched.gender ? (<span className="error text-danger">{errors.gender}</span>) : null}
                </div>       
-               <div className="col-md-6">
+               <div className="col-md-4">
                     <label className="form-label">Hobby</label>
+                    <div>
                     <input type="checkbox" 
                            className="form-check-input"  
                            name="hobby" 
@@ -116,10 +119,10 @@ function App() {
                            value='Reading' 
                            onChange={handleChange} 
                            onBlur={handleBlur} /> Reading
-
+                    </div>
                     {errors.hobby && touched.hobby ? (<span className="error text-danger">{errors.hobby}</span>) : null}
                </div>  
-               <div className="col-md-6">
+               <div className="col-md-4">
                     <label className="form-label">City</label>
                     <select className='form-control' name="city" onChange={handleChange} onBlur={handleBlur}>
                          <option value="">Select City</option>
